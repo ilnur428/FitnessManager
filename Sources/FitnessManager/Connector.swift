@@ -22,12 +22,7 @@ protocol ConnectorDelegate: AnyObject {
 
 class Connector: NSObject {
     
-//     var peripheralDevice: CBPeripheral! {
-//         didSet {
-//             peripheralDevice.delegate = self
-//         }
-//     }
-        var peripheralDevice: [CBPeripheral] = [] {
+    var peripheralDevice: CBPeripheral! {
         didSet {
             peripheralDevice.delegate = self
         }
