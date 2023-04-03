@@ -18,8 +18,8 @@ public final class FitnessManager: NSObject {
     public typealias ValueHandler = ((Int, FitnessError?) -> Void)?
     
     public static let shared = FitnessManager()
-//     public var device: CBPeripheral?
-        public var device: [CBPeripheral] = []
+    public var device: CBPeripheral?
+    public var devices: [CBPeripheral] = []
     // MARK: - Private properties
     
     private let connector = Connector()
@@ -138,7 +138,7 @@ extension FitnessManager: ConnectorDelegate {
     
     func connector(didDiscover peripheral: CBPeripheral) {
         isDeviceOn = true
-        device = peripheral
+        devices = peripheral
     }
     
     func connector(didConnect to: CBPeripheral, error: FitnessError?) {
