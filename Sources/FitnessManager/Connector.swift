@@ -63,7 +63,6 @@ extension Connector: CBCentralManagerDelegate {
         rssi RSSI: NSNumber
     ) {
         peripheralDevice = peripheral
-        centralManager.stopScan()
         delegate?.connector(didDiscover: peripheralDevice)
     }
     
