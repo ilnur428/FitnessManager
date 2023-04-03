@@ -138,7 +138,7 @@ extension FitnessManager: ConnectorDelegate {
     
     func connector(didDiscover peripheral: CBPeripheral) {
         isDeviceOn = true
-        devices = peripheral
+        devices.append(peripheral)
     }
     
     func connector(didConnect to: CBPeripheral, error: FitnessError?) {
