@@ -22,7 +22,7 @@ public final class FitnessManager: NSObject {
     public var devices: [CBPeripheral] = []
     // MARK: - Private properties
     
-    private let connector = Connector()
+    public let connector = Connector()
     private var completionHandler: ResultHandler
     private var serviceCompletionHandler: ServiceResultHandler
     private var characteristicsHandler: CharacteristicsHandler
