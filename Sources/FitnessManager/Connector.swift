@@ -48,7 +48,7 @@ extension Connector: CBCentralManagerDelegate {
             centralManager.scanForPeripherals(
                 withServices:
                     [
-                        //ServiceIdentifiers.deviceUuid.cbuuid
+                        ServiceIdentifiers.deviceUuid.cbuuid
                     ]
             )
         default:
