@@ -22,7 +22,7 @@ public final class FitnessManager: NSObject {
     public var devices: [CBPeripheral] = []
     // MARK: - Private properties
     
-    public let connector = Connector()
+    private let connector = Connector()
     private var completionHandler: ResultHandler
     private var serviceCompletionHandler: ServiceResultHandler
     private var characteristicsHandler: CharacteristicsHandler
@@ -51,6 +51,10 @@ public final class FitnessManager: NSObject {
         } else {
             completion?(false, .tryAgain)
         }
+    }
+    
+    public func setPeripheralDevice() {
+        connector.peripheralDevice = device
     }
     
     public func connectEmsFitnessGetServiceList(completion: ServiceResultHandler) {
