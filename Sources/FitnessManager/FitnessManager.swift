@@ -27,7 +27,7 @@ public final class FitnessManager: NSObject {
     private var serviceCompletionHandler: ServiceResultHandler
     private var characteristicsHandler: CharacteristicsHandler
     private var valueHandler: ValueHandler
-    private var isDeviceOn = false
+    public var isDeviceOn = false
     
     private override init() {
         completionHandler = nil
